@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteBase /
+
+RewriteRule ^home1$ /ck/index.php [NC,L,QSA]
+
+RewriteRule ^danh-muc/([0-9]*)$ /danhsachsanpham.php?iddm=$1 [NC,L,QSA]
+ 
+ErrorDocument 404 /ck/404.php
