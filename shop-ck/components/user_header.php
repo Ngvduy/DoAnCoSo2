@@ -26,10 +26,10 @@ if (isset($message)) {
     </nav>
 
     <div class="icons">
-      <?php 
-        $count_user_cart_items = $conn->prepare("SELECT * FROM cart WHERE user_id = ?");
-        $count_user_cart_items->execute([$user_id]);
-        $total_user_cart_items = $count_user_cart_items->rowCount();
+      <?php
+      $count_user_cart_items = $conn->prepare("SELECT * FROM cart WHERE user_id = ?");
+      $count_user_cart_items->execute([$user_id]);
+      $total_user_cart_items = $count_user_cart_items->rowCount();
       ?>
       <a href="search.php"><i class="fas fa-search"></i></a>
       <a href="cart.php"><i class="fas fa-shopping-cart"></i><span>(<?= $total_user_cart_items; ?>)</span></a>
@@ -39,10 +39,10 @@ if (isset($message)) {
 
     <div class="profile">
       <?php
-        $select_profile = $conn->prepare("SELECT * FROM users WHERE id = ?");
-        $select_profile->execute([$user_id]);
-        if ($select_profile->rowCount() > 0) {
-          $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
+      $select_profile = $conn->prepare("SELECT * FROM users WHERE id = ?");
+      $select_profile->execute([$user_id]);
+      if ($select_profile->rowCount() > 0) {
+        $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
       ?>
         <p class="name"><?= $fetch_profile['name'] ?></p>
         <div class="flex">
@@ -51,13 +51,12 @@ if (isset($message)) {
         </div>
         <p class="account"><a href="register.php">register</a> or <a href="login.php">login</a></p>
       <?php
-        }
-        else{
+      } else {
       ?>
         <p class="name">please login first</p>
         <a href="login.php" class="btn">login</a>
       <?php
-        }
+      }
       ?>
     </div>
 
