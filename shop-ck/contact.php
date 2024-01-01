@@ -103,9 +103,7 @@ if(isset($_POST['submit'])){
   
   <!-- footer section ends -->
   
-  <div class="loader">
-    <img src="images/loader.gif" alt="">
-  </div>
+ 
 
   <!-- custom js file link -->
   <script src="js/script.js"></script>

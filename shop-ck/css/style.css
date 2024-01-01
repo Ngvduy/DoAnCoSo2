@@ -880,6 +880,11 @@ section {
   margin: 1rem 0;
 }
 
+.quick-view .box .description{
+  font-size: 1.7rem;
+   color: #8e8e8e;
+}
+
 .quick-view .box .cart-btn{
   width: 100%;
   border: var(--border);

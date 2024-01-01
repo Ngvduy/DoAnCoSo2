@@ -133,9 +133,7 @@ $grand_total = 0;
 <?php include 'components/footer.php'; ?>
 <!-- footer section ends -->
 
-<div class="loader">
-    <img src="images/loader.gif" alt="">
-  </div>
+
 
 
 

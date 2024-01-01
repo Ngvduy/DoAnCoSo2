@@ -90,9 +90,7 @@ if (isset($_SESSION['user_id'])) {
   <!-- footer section ends -->
 
 
-  <div class="loader">
-    <img src="images/loader.gif" alt="">
-  </div>
+  
 
 
 

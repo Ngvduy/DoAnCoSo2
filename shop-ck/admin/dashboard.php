@@ -56,7 +56,7 @@ if(!isset($admin_id)){
       ?>
       <h3><span>$</span><?= $total_pendings; ?><span>/-</span></h3>
       <p>total pendings</p>
-      <a href="placed_orders.php" class="btn">see orders</a>
+      <a href="placed_orders.php?filter=pending" class="btn">see orders</a>
    </div>
 
    <div class="box">
@@ -70,7 +70,7 @@ if(!isset($admin_id)){
       ?>
       <h3><span>$</span><?= $total_completes; ?><span>/-</span></h3>
       <p>total completes</p>
-      <a href="placed_orders.php" class="btn">see orders</a>
+      <a href="placed_orders.php?filter=completed" class="btn">see orders</a>
    </div>
 
    <div class="box">

@@ -13,7 +13,7 @@ if(isset($_SESSION['user_id'])){
 
 if(isset($_POST['submit'])){
 
-  $address = $_POST['house'] .', '.$_POST['street'].', '.$_POST['district'].', '.$_POST['city'] .', '. $_POST['country'] .' - '. $_POST['pin_code'];
+  $address = $_POST['house'] .', '.$_POST['street'].', '.$_POST['district'].', '.$_POST['city'] .', '. $_POST['country'] .' - '. $_POST['card'];
   $address = filter_var($address, FILTER_SANITIZE_STRING);
 
   $update_address = $conn->prepare("UPDATE `users` set address = ? WHERE id = ?");
@@ -57,7 +57,7 @@ if(isset($_POST['submit'])){
       <input type="text" class="box" placeholder="district name" required maxlength="50" name="district">
       <input type="text" class="box" placeholder="city name" required maxlength="50" name="city">
       <input type="text" class="box" placeholder="country name" required maxlength="50" name="country">
-      <input type="number" class="box" placeholder="pin code" required min="0" max="999999" maxlength="6" name="pin_code">
+      <input type="number" class="box" placeholder="bank card number by payment method" required min="0" max="9999999999999999999" maxlength="19" name="card">
       <input type="submit" value="save address" name="submit" class="btn">
     </form>
 

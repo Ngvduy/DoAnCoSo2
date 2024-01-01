@@ -363,6 +363,12 @@ section{
    padding:1rem 0;
 }
 
+.show-products .box-container .box .description{
+   font-size: 1.7rem;
+   color: #8e8e8e;
+   padding-bottom: 1rem;
+}
+
 .show-products .box-container .box .flex{
    display: flex;
    align-items: center;

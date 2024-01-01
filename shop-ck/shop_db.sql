@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2023 at 08:11 PM
+-- Generation Time: Jan 01, 2024 at 05:53 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -102,23 +102,25 @@ CREATE TABLE `products` (
   `name` varchar(100) NOT NULL,
   `category` varchar(100) NOT NULL,
   `price` int(10) NOT NULL,
-  `image` varchar(100) NOT NULL
+  `image` varchar(100) NOT NULL,
+  `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `category`, `price`, `image`) VALUES
-(2, 'beautiful girl', 'portrait paintings', 22, 'painting_1.jpg'),
-(3, 'fruits', 'still life paintings', 22, 'painting_2.jpg'),
-(5, 'composer', 'another paintings', 22, 'painting_4.jpg'),
-(8, 'bottle', 'still life paintings', 22, 'cat-2.jpg'),
-(9, 'men', 'portrait paintings', 22, 'cat-3.jpg'),
-(10, 'artist', 'another paintings', 22, 'cat-4.jpg'),
-(11, 'lake', 'landscape paintings', 22, 'painting_3.jpg'),
-(12, 'lake in the morning', 'landscape paintings', 22, 'cat-1.jpeg'),
-(13, 'dark sky', 'landscape paintings', 22, 'home-2.jpg');
+INSERT INTO `products` (`id`, `name`, `category`, `price`, `image`, `description`) VALUES
+(2, 'beautiful girl', 'portrait paintings', 22, 'painting_1.jpg', 'gorgeous'),
+(3, 'fruits', 'still life paintings', 22, 'painting_2.jpg', 'lively, realistic'),
+(5, 'composer', 'another paintings', 22, 'painting_4.jpg', 'calm and sharp'),
+(8, 'bottle', 'still life paintings', 22, 'cat-2.jpg', 'lively, realistic'),
+(9, 'men', 'portrait paintings', 22, 'cat-3.jpg', 'calm and sharp'),
+(10, 'artist', 'another paintings', 22, 'cat-4.jpg', 'humorous'),
+(11, 'lake', 'landscape paintings', 22, 'painting_3.jpg', 'quiet, charming'),
+(12, 'lake in the morning', 'landscape paintings', 22, 'cat-1.jpeg', 'quiet, charming'),
+(13, 'dark sky', 'landscape paintings', 22, 'home-2.jpg', 'quiet, charming'),
+(14, 'gentlemen', 'portrait paintings', 22, 'pic-3.png', 'calm and sharp');
 
 -- --------------------------------------------------------
 
@@ -189,7 +191,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `messages`
@@ -207,7 +209,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `users`

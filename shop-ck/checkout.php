@@ -129,9 +129,9 @@ if (isset($_POST['submit'])) {
         <select name="method" class="select-box" required>
           <option value="" disabled selected>select payment method --</option>
           <option value="cash on delivery">cash on delivery</option>
-          <option value="credit card">credit card</option>
-          <option value="paymb">paymb</option>
-          <option value="paymomo">paymomo</option>
+          <option value="credit card">credit card - 1111222233334444</option>
+          <option value="paymb">paymb - 5555666677778888</option>
+          <option value="paymomo">paymomo - 9999888877776666</option>
         </select>
         <input type="submit" value="place order" class="btn <?php if ($fetch_profile['address'] == '') {echo 'disabled';} ?>" style="width:100%; background:var(--red); color:var(--white);" name="submit">
       </div>
